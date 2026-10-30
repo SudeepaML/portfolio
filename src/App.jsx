@@ -288,6 +288,13 @@ function App() {
   }}>
 
     {[
+  {
+  title: "KMPL Cricket Fund Management",
+  tech: "Kotlin | Jetpack Compose | Firebase Realtime Database",
+  desc: "Developed a cricket fund management platform with admin-controlled player management, monthly contribution tracking, paid and pending payment status, and Baddi Chitti principal and interest calculations.",
+  link: "https://kmpl-cricket.vercel.app/"
+},
+  
       {
         title: "Loan Risk Analyzer",
         tech: "Java | Spring Boot | React | MySQL",
@@ -311,6 +318,37 @@ function App() {
       }
 
     ].map((project) => (
+      {project.link ? (
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      padding: "12px 20px",
+      borderRadius: "10px",
+      backgroundColor: "#00abf0",
+      color: "white",
+      textDecoration: "none",
+      cursor: "pointer"
+    }}
+  >
+    View Live Project
+  </a>
+) : (
+  <button
+    style={{
+      padding: "12px 20px",
+      border: "none",
+      borderRadius: "10px",
+      backgroundColor: "#00abf0",
+      color: "white",
+      cursor: "pointer"
+    }}
+  >
+    View Project
+  </button>
+)}
 
       <div
         key={project.title}
